@@ -24,7 +24,7 @@ class Database:
             cursor.executescript(schema_file.read())
             connection.commit()
             connection.close()
-    
+
     @staticmethod
     def add_user(user: User):
         Database.execute(
@@ -33,25 +33,25 @@ class Database:
                 user.const_user_name,
                 user.user_user_name,
                 user.telegram_id,
-                user.name_teacher
+                user.name_teacher,
             ],
         )
         return True
-    
+
     @staticmethod
     def add_lesson(lesson: Lesson):
         Database.execute(
             "INSERT INTO lessons (telegram_id, day_lesson, time_lesson, time_reminder, name_teacher) VALUES (?, ?, ?, ?, ?)",
-            [   
+            [
                 lesson.telegram_id,
                 lesson.day_lesson,
                 lesson.time_lesson,
-                lesson.time_reminder
-                lesson.name_teacher
+                lesson.time_reminder,
+                lesson.name_teacher,
             ],
         )
         return True
-    
+
     @staticmethod
     def add_change_lesson(change_lessons: ChangeLesson):
         Database.execute(
@@ -62,11 +62,11 @@ class Database:
                 change_lessons.old_time_lesson,
                 change_lessons.new_time_lesson,
                 change_lessons.time_reminder,
-                change_lessons.name_teacher
+                change_lessons.name_teacher,
             ],
         )
         return True
-    
+
     @staticmethod
     def add_admin(admin: Admin):
         Database.execute(

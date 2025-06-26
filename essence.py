@@ -19,6 +19,7 @@ class Lesson:
     name_teacher: str
     id: int = None
 
+
 @dataclass
 class ChangeLesson:
     telegram_id: str = None
@@ -28,6 +29,7 @@ class ChangeLesson:
     time_reminder: str
     name_teacher: str
     id: int = None
+
 
 @dataclass
 class Admin:
