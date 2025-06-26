@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS change_lessons (
     day_lesson INTEGER NOT NULL,
     old_time_lesson TEXT NOT NULL,
     new_time_lesson TEXT NOT NULL,
+    time_reminder TEXT NOT NULL,
     name_teacher TEXT NOT NULL,
     FOREIGN KEY (day_lesson) REFERENCES lessons(day_lesson),
     FOREIGN KEY (old_time_lesson) REFERENCES lessons(time_lesson),

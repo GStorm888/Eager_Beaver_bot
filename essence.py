@@ -25,6 +25,7 @@ class ChangeLesson:
     day_lesson: int
     old_time_lesson: str
     new_time_lesson: str
+    time_reminder: str
     name_teacher: str
     id: int = None
 
